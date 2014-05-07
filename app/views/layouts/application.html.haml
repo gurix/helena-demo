@@ -15,5 +15,7 @@
   .container-fluid
     #content
       = yield
+  = link_to "https://github.com/gurix/helena" do
+    = image_tag "forkme.png", alt: "Fork me on GitHub", class: "github-ribbon"
 
   = javascript_include_tag 'application'

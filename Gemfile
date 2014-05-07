@@ -31,6 +31,7 @@ gem 'jquery-rails'
 
 # Use debugger
 gem 'debugger', group: [:development, :test]
+gem 'pry', group: [:development, :test]
 gem 'quiet_assets' , group: [:development, :test]
 gem 'better_errors', group: [:development, :test]
 gem 'launchy' , group: [:development, :test]

@@ -1,8 +1,10 @@
 %nav
   %ul
     %li
-      %a{ href: '/' }
-        Home
+      = link_to t('.home'), root_path
     %li
-      %a{ href: 'https://github.com/gurix/helena', target: '_blank' }
-        Helena on Github
+      - if user_signed_in?
+        = link_to t('.logout'), destroy_user_session_path, method: :delete
+
+      - else
+        = link_to t('.sign_in'), user_session_path
