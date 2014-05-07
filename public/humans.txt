@@ -1,0 +1,13 @@
+/* TEAM */
+  Lord: Markus Graf
+  Site: www.markusgraf.ch
+  Twitter: @gurix
+  From: Zurich, Switzerland
+
+/* THANKS */
+  Your Position: Your Name
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery
+  Software: Helena Demo
