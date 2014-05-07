@@ -18,6 +18,8 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'
 
+gem 'haml-rails'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
