@@ -20,6 +20,8 @@ gem 'omniauth-twitter'
 
 gem 'haml-rails'
 
+gem 'rspec-rails', group: :test
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 

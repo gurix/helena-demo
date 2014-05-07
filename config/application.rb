@@ -7,7 +7,6 @@ require "action_controller/railtie"
 require "action_mailer/railtie"
 require "action_view/railtie"
 require "sprockets/railtie"
-require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -29,6 +28,7 @@ module HelenaDemo
 
     config.generators do |g|
       g.template_engine :haml # We are using Haml by default
+      g.test_framework :rspec # We use rspec instead of unit tests
     end
   end
 end
