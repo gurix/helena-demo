@@ -1,17 +1,19 @@
 !!!
 %head
-  %meta{charset: "utf-8"}/
+  %meta{ charset: 'utf-8' }/
+  %meta{ 'http-equiv' => 'X-UA-Compatible', content: 'IE=edge' }
+  %meta{ content: "Helena survey framework demo", name: "description" }/
+  %meta{ content: "width=device-width", name: "viewport" }/
 
   %title HelenaDemo
 
-  %meta{content: "", name: "description"}/
-
-  %meta{content: "width=device-width", name: "viewport"}/
-
-  = stylesheet_link_tag "application"
+  = stylesheet_link_tag 'application'
   = csrf_meta_tags
 %body
-
-  = yield
+  %header
+    = render 'shared/navigation'
+  .container-fluid
+    #content
+      = yield
 
   = javascript_include_tag 'application'

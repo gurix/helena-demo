@@ -22,6 +22,8 @@ gem 'omniauth-twitter'
 
 gem 'haml-rails'
 
+gem 'bootstrap-sass', '~> 3.1.1'
+
 gem 'rspec-rails', group: :test
 
 # Use jquery as the JavaScript library
