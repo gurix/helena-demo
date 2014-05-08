@@ -14,6 +14,9 @@
     = render 'shared/navigation'
   .container-fluid
     = render partial: "shared/flash_messages", flash: flash
+    - unless render_breadcrumbs.blank?
+      %ol.breadcrumb
+        = render_breadcrumbs tag: :li, separator: ''
     = yield
 
   = link_to "https://github.com/gurix/helena" do

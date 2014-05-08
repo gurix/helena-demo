@@ -1,10 +1,15 @@
 %nav
   %ul
     %li
-      = link_to t('.home'), root_path
+      = link_to t('.home'), main_app.root_path
+
+    - if user_signed_in?
+      %li
+        = link_to t('.admin'), helena.admin_surveys_path
+
     %li
       - if user_signed_in?
-        = link_to t('.logout'), destroy_user_session_path, method: :delete
+        = link_to t('.logout'), main_app.destroy_user_session_path, method: :delete
 
       - else
-        = link_to t('.sign_in'), user_session_path
+        = link_to t('.sign_in'), main_app.user_session_path

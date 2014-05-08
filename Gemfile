@@ -13,7 +13,9 @@ gem 'coffee-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-
+gem 'helena',
+  git: 'https://github.com/gurix/helena.git'
+# path: '../helena',
 
 gem 'mongoid', '~> 4.0.0.beta1'
 gem 'devise'
@@ -27,6 +29,7 @@ gem 'haml-rails'
 gem 'bootstrap-sass', '~> 3.1.1'
 
 gem 'rspec-rails', group: :test
+gem 'capybara', group: :test
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -38,3 +41,8 @@ gem 'quiet_assets' , group: [:development, :test]
 gem 'better_errors', group: [:development, :test]
 gem 'launchy' , group: [:development, :test]
 gem 'binding_of_caller', group: [:development, :test]
+gem 'factory_girl', group: [:development, :test]
+gem 'ffaker', group: [:development, :test]
+gem 'database_cleaner', group: [:development, :test]
+gem 'colorize', group: [:development, :test]
+gem 'mongoid-rspec', group: [:development, :test]
