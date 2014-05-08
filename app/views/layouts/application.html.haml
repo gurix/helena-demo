@@ -2,8 +2,8 @@
 %head
   %meta{ charset: 'utf-8' }/
   %meta{ 'http-equiv' => 'X-UA-Compatible', content: 'IE=edge' }
-  %meta{ content: "Helena survey framework demo", name: "description" }/
-  %meta{ content: "width=device-width", name: "viewport" }/
+  %meta{ content: 'Helena survey framework demo', name: 'description' }/
+  %meta{ content: 'width=device-width', name: 'viewport' }/
 
   %title HelenaDemo
 
@@ -13,13 +13,13 @@
   %header
     = render 'shared/navigation'
   .container-fluid
-    = render partial: "shared/flash_messages", flash: flash
+    = render partial: 'shared/flash_messages', flash: flash
     - unless render_breadcrumbs.blank?
       %ol.breadcrumb
         = render_breadcrumbs tag: :li, separator: ''
     = yield
 
-  = link_to "https://github.com/gurix/helena" do
-    = image_tag "forkme.png", alt: "Fork me on GitHub", class: "github-ribbon"
+  = link_to 'https://github.com/gurix/helena' do
+    = image_tag 'forkme.png', alt: 'Fork me on GitHub', class: 'github-ribbon'
 
   = javascript_include_tag 'application'
