@@ -21,6 +21,7 @@ gem 'mongoid', '~> 4.0.0.beta1'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'breadcrumbs_on_rails'
 
 gem 'rails-boilerplate'
 gem 'simple_form'

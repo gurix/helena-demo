@@ -1,5 +1,16 @@
+@import 'variables'
+
 .alert-alert
   @extend .alert-danger
 
 .alert-notice
   @extend .alert-info
+
+
+#error_explanation
+  @extend .alert
+  @extend .alert-danger
+
+  h2
+    font-size: $font-size-base
+    margin-top: 0px

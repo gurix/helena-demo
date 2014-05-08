@@ -1,18 +1,30 @@
 header
   nav
-    background-color: #0164a7
+    background-color: #FFFFFF
 
     a, a:visited
-      color: #FFFFFF
-      font-size: 18px
+      font-size: 14px
 
     ul
       padding: 0px
-      margin: 0px
-
+      margin: 15px
+      list-style: none
+      overflow: hidden
     li
-      padding-left: 12px
-      display: inline
+      margin: 0px 15px 0px 0px
+      display: box
+      float: left
+      border-bottom: 2px solid green
+      width: 150px
+
+      a, a:visited
+        color: green
+
+    li.active
+      border-bottom: 2px solid #FF6600
+
+      a, a:visited
+        color: #FF6600
 
 #flashes
   margin-top: 10px
@@ -30,8 +42,8 @@ header
       bottom: 0
 
       li
-        padding-left: 12px
         display: block
+        margin-bottom: 15px
 
       li:first-child
         margin-top: 24px
