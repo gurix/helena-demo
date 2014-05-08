@@ -13,13 +13,15 @@ gem 'coffee-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-gem "rails-boilerplate"
+
 
 gem 'mongoid', '~> 4.0.0.beta1'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'
 
+gem 'rails-boilerplate'
+gem 'simple_form'
 gem 'haml-rails'
 
 gem 'bootstrap-sass', '~> 3.1.1'

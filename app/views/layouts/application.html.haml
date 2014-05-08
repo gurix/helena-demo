@@ -9,12 +9,13 @@
 
   = stylesheet_link_tag 'application'
   = csrf_meta_tags
-%body
+%body{class: controller_name}
   %header
     = render 'shared/navigation'
   .container-fluid
-    #content
-      = yield
+    = render partial: "shared/flash_messages", flash: flash
+    = yield
+
   = link_to "https://github.com/gurix/helena" do
     = image_tag "forkme.png", alt: "Fork me on GitHub", class: "github-ribbon"
 
