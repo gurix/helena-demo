@@ -5,6 +5,9 @@ class User
   TEMP_EMAIL_REGEX = /change@me.com/
 
   has_many :identities
+
+  has_many :questionary_sessions
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable

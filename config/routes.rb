@@ -6,5 +6,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  resources :surveys, only: [] do
+    resources :questionary_sessions
+  end
+
   mount Helena::Engine => '/helena'
 end

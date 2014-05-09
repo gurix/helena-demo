@@ -25,3 +25,7 @@ en:
       home: Home
       logout: Logout
       sign_in: Sign in
+
+  welcome:
+    index:
+      sign_in: Please sign in to complete this questionary
