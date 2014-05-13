@@ -14,6 +14,8 @@ class User
   devise :database_authenticatable, :registerable, :confirmable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   validates_format_of :email, without: TEMP_EMAIL_REGEX, on: :update
+  validates :email, presence: true, unless: Proc.new { |user| user.email == TEMP_EMAIL}
+
 
   ## Database authenticatable
   field :email,              type: String, default: ''
@@ -65,7 +67,7 @@ class User
 
   private
 
-  def create_user_from_auth(auth)
+  def self.create_user_from_auth(auth)
     user = User.new(
       name: auth.extra.raw_info.name,
       # username: auth.info.nickname || auth.uid,
@@ -74,5 +76,6 @@ class User
     )
     user.skip_confirmation!
     user.save!
+    user
   end
 end
