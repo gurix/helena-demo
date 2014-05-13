@@ -48,7 +48,7 @@ def create_satisfaction_scale_survey
   survey = create :survey, name: 'The Satisfaction with Life Scale'
   base_version = survey.versions.create version: 0
   base_version.survey_detail = build :survey_detail, title:       'The Satisfaction with Life Scale',
-                                                     description: 'A 5-item scale designed to measure global cognitive judgments of ones life satisfaction.'
+                                                     description: 'A 5-item scale designed to measure global cognitive judgments of ones life satisfaction. – Ed Diener'
 
   base_version.question_groups << satisfaction_details
   published_version = publish(base_version)

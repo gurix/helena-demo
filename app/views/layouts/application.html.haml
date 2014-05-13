@@ -10,13 +10,9 @@
   = stylesheet_link_tag 'application'
   = csrf_meta_tags
 %body{class: controller_name}
-  %header
-    = render 'shared/navigation'
-  .container-fluid
+  .container
     = render partial: 'shared/flash_messages', flash: flash
-    - unless render_breadcrumbs.blank?
-      %ol.breadcrumb
-        = render_breadcrumbs tag: :li, separator: ''
+    = render 'shared/breadcrumbs'
     = yield
 
   = link_to 'https://github.com/gurix/helena' do

@@ -22,10 +22,12 @@
 en:
   shared:
     navigation:
-      home: Home
-      logout: Logout
-      sign_in: Sign in
+      home: Helena Demo
+      sign_out: Sign out
 
   welcome:
     index:
       sign_in: Please sign in to complete this questionary
+      new_session: Complete this questionary with a new session
+      session_completed: Session was sucessfully completed
+      session_not_completed: Session was not completed yet
