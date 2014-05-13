@@ -14,8 +14,7 @@ class User
   devise :database_authenticatable, :registerable, :confirmable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   validates_format_of :email, without: TEMP_EMAIL_REGEX, on: :update
-  validates :email, presence: true, unless: Proc.new { |user| user.email == TEMP_EMAIL}
-
+  validates :email, presence: true, unless: -> (user) { user.email == TEMP_EMAIL }
 
   ## Database authenticatable
   field :email,              type: String, default: ''
