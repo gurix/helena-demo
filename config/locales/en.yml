@@ -23,7 +23,6 @@ en:
   shared:
     navigation:
       home: Helena Demo
-      sign_out: Sign out
 
   welcome:
     index:
