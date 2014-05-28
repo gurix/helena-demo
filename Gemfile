@@ -22,6 +22,7 @@ gem 'factory_girl'
 gem 'ffaker'
 gem 'colorize'
 gem 'database_cleaner'
+gem 'rake'
 
 gem 'devise'
 gem 'omniauth'
