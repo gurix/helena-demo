@@ -15,7 +15,7 @@ gem 'coffee-rails'
 
 gem 'helena',
   git: 'https://github.com/gurix/helena.git'
-# path: '../helena',
+  #path: '../helena'
 
 gem 'mongoid', '~> 4.0.0.beta1'
 gem 'devise'
@@ -38,6 +38,7 @@ gem 'jquery-rails'
 # Use debugger
 gem 'debugger', group: [:development, :test]
 gem 'pry', group: [:development, :test]
+gem 'pry-nav', group: [:development, :test]
 gem 'quiet_assets' , group: [:development, :test]
 gem 'better_errors', group: [:development, :test]
 gem 'launchy' , group: [:development, :test]
