@@ -3,9 +3,11 @@
 [![Coverage Status](https://coveralls.io/repos/gurix/helena-demo/badge.png?branch=master)](https://coveralls.io/r/gurix/helena-demo?branch=master)
 
 # Helena-Demo
+Helena is an online survey/test framework designed for agile survey/test development, longitudinal studies and instant feedback.
+
 This is a little demo application implementing http://github.com/gurix/helena.
 
-Helena is an online survey/test framework designed for agile survey/test development, longitudinal studies and instant feedback.
+Live Demo on: http://helena-demo.herokuapp.com
 
 # Installation
 
