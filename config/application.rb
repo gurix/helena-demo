@@ -26,6 +26,8 @@ module HelenaDemo
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    config.i18n.enforce_available_locales = false
+
     config.generators do |g|
       g.template_engine :haml # We are using Haml by default
       g.test_framework :rspec # We use rspec instead of unit tests
