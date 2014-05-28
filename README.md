@@ -17,6 +17,7 @@ cd helena-demo
 bundle install
 rake db:seed
 rails s
+open http://127.0.0.1:3000
 ```
 
-Go to http://127.0.0.1:3000 and log in via twitter or with the user `hans.muster@somedomain.tld` and the password `test123`.
+That's all :-D
