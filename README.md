@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/gurix/helena-demo.svg?branch=master)](https://travis-ci.org/gurix/helena-demo)
+[![Code Climate](https://codeclimate.com/github/gurix/helena-demo.png)](https://codeclimate.com/github/gurix/helena-demo)
 
 # Helena-Demo
 This is a little demo application implementing http://github.com/gurix/helena.
