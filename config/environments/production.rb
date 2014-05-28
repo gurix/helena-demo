@@ -79,12 +79,13 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :port           => '25',
-    :address        => ENV['SMTP_HOST'],
-    :user_name      => ENV['SMTP_USER'],
-    :password       => ENV['SMTP_PASSWORD'],
-    :domain         => 'helena-demo.heroku.com',
-    :authentication => :plain,
+    port:                '25',
+    address:             ENV['SMTP_HOST'],
+    user_name:           ENV['SMTP_USER'],
+    password:            ENV['SMTP_PASSWORD'],
+    domain:              'helena-demo.heroku.com',
+    authentication:      :plain,
+    openssl_verify_mode: 'none'
   }
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
