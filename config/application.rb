@@ -27,6 +27,7 @@ module HelenaDemo
     # config.i18n.default_locale = :de
 
     config.i18n.enforce_available_locales = false
+    config.serve_static_assets = true
 
     config.generators do |g|
       g.template_engine :haml # We are using Haml by default
