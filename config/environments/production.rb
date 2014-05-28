@@ -80,9 +80,9 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :port           => '25',
-    :address        => ENV['POSTMARK_SMTP_SERVER'],
-    :user_name      => ENV['POSTMARK_API_KEY'],
-    :password       => ENV['POSTMARK_API_KEY'],
+    :address        => ENV['SMTP_HOST'],
+    :user_name      => ENV['SMTP_USER'],
+    :password       => ENV['SMTP_PASSWORD'],
     :domain         => 'helena-demo.heroku.com',
     :authentication => :plain,
   }
