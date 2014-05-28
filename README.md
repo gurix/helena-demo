@@ -7,7 +7,7 @@ Helena is an online survey/test framework designed for agile survey/test develop
 
 This is a little demo application implementing http://github.com/gurix/helena.
 
-Live Demo on: http://helena-demo.herokuapp.com
+Live demo on: http://helena-demo.herokuapp.com
 
 # Installation
 
