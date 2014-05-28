@@ -49,3 +49,5 @@ gem 'ffaker', group: [:development, :test]
 gem 'database_cleaner', group: [:development, :test]
 gem 'colorize', group: [:development, :test]
 gem 'mongoid-rspec', group: [:development, :test]
+gem 'coveralls', require: false, group: :test
+
