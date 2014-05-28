@@ -15,6 +15,7 @@ class User
 
   validates_format_of :email, without: TEMP_EMAIL_REGEX, on: :update
   validates :email, presence: true, unless: -> (user) { user.email == TEMP_EMAIL }
+  validates :name, presence: true
 
   ## Database authenticatable
   field :email,              type: String, default: ''

@@ -6,7 +6,9 @@
     %p Helena is an online survey/test framework designed for agile survey/test development, longitudinal studies and instant feedback.
 
     - if user_signed_in?
-      %p== Below you see an overview of all published surveys. In this demo you can manage them in the #{link_to 'admin section', helena.admin_surveys_path}. #{link_to 'Sign out here', main_app.destroy_user_session_path, method: :delete} if you need to change the account.
+      %p== Below you see an overview of all published surveys. In this demo you can manage them in the #{link_to 'admin section', helena.admin_surveys_path}.
+
+      %p== You are logged in as #{current_user.name}. #{link_to 'Sign out here', main_app.destroy_user_session_path, method: :delete} if you need to change the account.
     - else
       %p
         Below you see an overview of all published surveys. You can
