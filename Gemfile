@@ -23,7 +23,7 @@ gem 'ffaker'
 gem 'colorize'
 gem 'database_cleaner'
 gem 'rake'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 
 gem 'devise'
 gem 'omniauth'
