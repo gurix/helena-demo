@@ -8,9 +8,10 @@ AllCops:
     - spec/dummy/config/initializers/secret_token.rb
     - db/migrate/**
     - db/seeds.rb
+    - db/seeds/**
 Documentation:
   Enabled: false
 LineLength:
-  Enabled: true 
+  Enabled: true
   Max: 160
 
