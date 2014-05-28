@@ -19,6 +19,10 @@ gem 'helena',
 
 gem 'mongoid', '~> 4.0.0.beta1'
 gem 'factory_girl'
+gem 'ffaker'
+gem 'colorize'
+gem 'database_cleaner'
+
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'
@@ -38,7 +42,6 @@ gem 'capybara', group: :test
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-# Use debugger
 gem 'debugger', group: [:development, :test]
 gem 'pry', group: [:development, :test]
 gem 'pry-nav', group: [:development, :test]
@@ -46,9 +49,6 @@ gem 'quiet_assets' , group: [:development, :test]
 gem 'better_errors', group: [:development, :test]
 gem 'launchy' , group: [:development, :test]
 gem 'binding_of_caller', group: [:development, :test]
-gem 'ffaker', group: [:development, :test]
-gem 'database_cleaner', group: [:development, :test]
-gem 'colorize', group: [:development, :test]
 gem 'mongoid-rspec', group: [:development, :test]
 gem 'coveralls', require: false, group: :test
 
