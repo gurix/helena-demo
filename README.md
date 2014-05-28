@@ -7,7 +7,7 @@ Helena is an online survey/test framework designed for agile survey/test develop
 
 # Installation
 
-```sh
+```
 git clone https://github.com/gurix/helena-demo.git
 cd helena-demo
 bundle install
