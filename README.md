@@ -3,9 +3,11 @@
 [![Coverage Status](https://coveralls.io/repos/gurix/helena-demo/badge.png?branch=master)](https://coveralls.io/r/gurix/helena-demo?branch=master)
 
 # Helena-Demo
+Helena is an online survey/test framework designed for agile survey/test development, longitudinal studies and instant feedback.
+
 This is a little demo application implementing http://github.com/gurix/helena.
 
-Helena is an online survey/test framework designed for agile survey/test development, longitudinal studies and instant feedback.
+Live demo on: http://helena-demo.herokuapp.com
 
 # Installation
 
@@ -15,6 +17,7 @@ cd helena-demo
 bundle install
 rake db:seed
 rails s
+open http://127.0.0.1:3000
 ```
 
-Go to http://127.0.0.1:3000 and log in via twitter or with the user `hans.muster@somedomain.tld` and the password `test123`.
+That's all :-D
