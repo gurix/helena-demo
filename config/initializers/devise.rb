@@ -226,8 +226,17 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
-  config.omniauth :twitter, 'ptCTnXmRnp5wHQbCd9fMtjNZy', 'RnloF0IV6GwU7jFWtUSLvHzwLtEenDdBvZquXyTG7bwuAO71o8'
-  config.omniauth :facebook, '660484240667374', 'fc71dedab72d2a8954aeb9e1fd5730c8'
+  if Rails.env.development? || Rails.env.test?
+    # Use http://127.0.0.1:3000 here
+    config.omniauth :twitter, 'ptCTnXmRnp5wHQbCd9fMtjNZy', 'RnloF0IV6GwU7jFWtUSLvHzwLtEenDdBvZquXyTG7bwuAO71o8'
+    # Use http://localhost:3000 here
+    config.omniauth :facebook, '660484240667374', 'fc71dedab72d2a8954aeb9e1fd5730c8'
+  end
+
+  if Rails.env.production?
+    config.omniauth :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET']
+    config.omniauth :facebook, ENV['FB_KEY'], ENV['FB_SECRET']
+  end
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
