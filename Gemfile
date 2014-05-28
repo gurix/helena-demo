@@ -22,6 +22,7 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
+gem 'jwt'
 gem 'breadcrumbs_on_rails'
 
 gem 'rails-boilerplate'
