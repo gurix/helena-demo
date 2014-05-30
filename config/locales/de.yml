@@ -1,0 +1,15 @@
+de:
+  shared:
+    navigation:
+      home: Helena Demo
+      admin: Administration
+    errors:
+      failed_to_create_session: 'Es konnte keine Sitzung erstellt werden.'
+
+  welcome:
+    index:
+      sign_in: Bitte melden Sie sich an um an der Umfrage teilzunehmen
+      new_session: Diese Umfrage in einer neuen Sitzung beantworten
+      session_completed: Die Sitzung wurde erfolgreich abgeschlossen
+      session_not_completed: Die Sitzung ist noch pendent
+      proceed: Fortfahren

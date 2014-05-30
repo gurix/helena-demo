@@ -7,7 +7,7 @@ class QuestionarySessionsController < ApplicationController
     if session.save
       redirect_to helena.edit_survey_session_path(@survey, session), status: :found
     else
-      flash[:error] = t '.failed_to_create_session'
+      flash[:error] = t 'shared.errors.failed_to_create_session'
       redirect_to main_app.root_path
     end
   end

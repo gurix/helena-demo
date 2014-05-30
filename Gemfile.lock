@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/gurix/helena.git
-  revision: 6fe7aec82f56dde9b3a35fc5ffc76737745942fc
+  revision: ddb6cccb40b43029974d82d44a772f72cc544f31
   specs:
     helena (0.0.1)
       bootstrap-sass
