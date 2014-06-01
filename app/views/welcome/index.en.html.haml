@@ -48,4 +48,7 @@
                     - else
                       = link_to t('.proceed'), helena.edit_survey_session_path(survey, session)
 
-
+#languages
+  = link_to main_app.root_path(locale: :de) do
+    View this site also in German
+    %img{ src: image_path('icon_de.png'), alt: 'German' }
