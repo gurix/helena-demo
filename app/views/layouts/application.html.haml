@@ -19,3 +19,9 @@
     = image_tag 'forkme.png', alt: 'Fork me on GitHub', class: 'github-ribbon'
 
   = javascript_include_tag 'application'
+  %script{src: "//static.getclicky.com/js", type: "text/javascript"}
+  :javascript
+    try{ clicky.init(100741910); }catch(e){}
+  %noscript
+    %p
+      %img{alt: "Clicky", height: "1", src: "//in.getclicky.com/100741910ns.gif", width: "1"}/
