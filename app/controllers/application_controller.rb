@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
   before_action :set_locale, :set_home_breadcrumb, :redirect_to_locale
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-
   def set_home_breadcrumb
     unless request.path == main_app.root_path(locale: I18n.locale)
       add_breadcrumb t('shared.navigation.home'), main_app.root_path(locale: I18n.locale)
