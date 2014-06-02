@@ -27,7 +27,7 @@ module Seeds
       satisfaction_matrix.sub_questions << build(:sub_question, text: 'So far I have gotten the important things I want in life.', code: 'important_things', position: 4)
       satisfaction_matrix.sub_questions << build(:sub_question, text: 'If I could live my life over, I would change almost nothing.', code: 'nothing_to_change', position: 5)
 
-      satisfaction_details = build :question_group, questions: [satisfaction_matrix]
+      satisfaction_details = build :question_group, questions: [satisfaction_matrix], title: '', position: 0
 
 
       survey = create :survey, name: 'The Satisfaction with Life Scale', tag_list: 'Life satisfaction', language: 'en'
@@ -60,7 +60,7 @@ module Seeds
       satisfaction_matrix.sub_questions << build(:sub_question, text: 'Ich habe bisher die wichtigen Dinge, die ich mir vom Leben wünsche, auch bekommen.', code: 'important_things', position: 4)
       satisfaction_matrix.sub_questions << build(:sub_question, text: 'Wenn ich mein Leben noch einmal leben koennte, wuerde ich fast nichts ändern.', code: 'nothing_to_change', position: 5)
 
-      satisfaction_details = build :question_group, questions: [satisfaction_matrix]
+      satisfaction_details = build :question_group, questions: [satisfaction_matrix], title: '', position: 0
 
 
       survey = create :survey, name: 'Fragebogen zur Erfassung der Lebenszufriedenheit', tag_list: 'Lebenszufriedenheit', language: 'de'
