@@ -14,8 +14,8 @@ gem 'coffee-rails'
 # gem 'therubyracer',  platforms: :ruby
 
 gem 'helena',
-  git: 'https://github.com/gurix/helena.git'
-  #path: '../helena'
+  #git: 'https://github.com/gurix/helena.git'
+  path: '../helena'
 
 gem 'mongoid', '~> 4.0.0.beta1'
 gem 'factory_girl'
