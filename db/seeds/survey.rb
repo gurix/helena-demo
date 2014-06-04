@@ -31,7 +31,9 @@ module Seeds
 
 
       survey = create :survey, name: 'The Satisfaction with Life Scale', tag_list: 'Life satisfaction', language: 'en'
-      base_version = survey.versions.create version: 0
+      session_report = Haml::Engine.new(File.read(File.dirname(__FILE__) + '/files/report_satisfaction_scale_survey.en.html.haml')).render
+
+      base_version = survey.versions.create version: 0, session_report: session_report
       base_version.survey_detail = build :survey_detail, title:       'The Satisfaction with Life Scale',
                                                          description: 'A 5-item scale designed to measure global cognitive judgments of ones life satisfaction. – Ed Diener'
 
@@ -64,7 +66,10 @@ module Seeds
 
 
       survey = create :survey, name: 'Fragebogen zur Erfassung der Lebenszufriedenheit', tag_list: 'Lebenszufriedenheit', language: 'de'
-      base_version = survey.versions.create version: 0
+
+      session_report = Haml::Engine.new(File.read(File.dirname(__FILE__) + '/files/report_satisfaction_scale_survey.de.html.haml')).render
+
+      base_version = survey.versions.create version: 0, session_report: session_report
       base_version.survey_detail = build :survey_detail, title:       'Fragebogen zur Erfassung der Lebenszufriedenheit',
                                                          description: 'Die Lebenszufriedenheit wird anhand von 5 Fragen erfasst. – Ed Diener'
 
