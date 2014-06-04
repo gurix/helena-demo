@@ -1,6 +1,13 @@
-class QuestionarySessionsController < ApplicationController
+require 'haml'
+class QuestionarySessionsController < Helena::SessionsController
   before_filter :authenticate_user!
-  before_filter :load_survey
+
+  def show
+    @session = current_user.questionary_sessions.find(params[:id])
+    version = @survey.versions.find(@session.version_id)
+    template = Liquid::Template.parse(version.session_report)
+    render html: template.render(variable_mapping.merge user_mapping).html_safe, layout: true
+  end
 
   def new
     session = QuestionarySession.new survey: @survey, version: @survey.newest_version, user: current_user
@@ -14,7 +21,7 @@ class QuestionarySessionsController < ApplicationController
 
   private
 
-  def load_survey
-    @survey = Helena::Survey.find params[:survey_id]
+  def user_mapping
+    { user: @session.user.attributes }.deep_stringify_keys
   end
 end

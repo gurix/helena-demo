@@ -13,6 +13,7 @@ de:
       session_completed: Die Sitzung wurde erfolgreich abgeschlossen
       session_not_completed: Die Sitzung ist noch pendent
       proceed: Fortfahren
+      view: Bericht betrachten
 
   helena:
     sessions:

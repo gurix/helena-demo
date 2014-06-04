@@ -12,3 +12,4 @@ en:
       session_completed: Session was sucessfully completed
       session_not_completed: Session was not completed yet
       proceed: Proceed
+      view: View report
