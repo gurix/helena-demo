@@ -1,0 +1,31 @@
+- if survey.newest_version.version > 0
+  .panel.panel-default.survey
+    .panel-heading= survey.newest_version.survey_detail.title
+    .panel-body
+      %p= survey.newest_version.survey_detail.description
+      - if user_signed_in?
+        = link_to t('.new_session'), main_app.new_survey_questionary_session_path(survey), class: 'btn btn-success pull-right'
+      - else
+        = link_to t('.sign_in'), main_app.user_session_path, class: 'btn btn-primary  pull-right'
+
+    - if user_signed_in?
+      - if current_user.questionary_sessions.where(survey: survey).any?
+        %table.table
+          %tbody
+            - current_user.questionary_sessions.where(survey: survey).asc(:created_at).each do |session|
+              %tr
+                %td.icon{class: "#{ session.completed? ? 'text-success' : 'text-danger'}"}
+                  - if session.completed?
+                    %span.glyphicon.glyphicon-ok-circle{ title: t('.session_completed') }
+                  - else
+                    %span.glyphicon.glyphicon-warning-sign{ title: t('.session_not_completed') }
+                %td.created_at
+                  = time_ago_in_words(session.created_at)
+                %td.version
+                  = Helena::Version.model_name.human
+                  = survey.versions.find(session.version_id).version
+                %td
+                  - if session.completed?
+
+                  - else
+                    = link_to t('.proceed'), helena.edit_survey_session_path(survey, session)
