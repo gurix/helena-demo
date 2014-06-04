@@ -1,5 +1,6 @@
-PATH
-  remote: ../helena
+GIT
+  remote: https://github.com/gurix/helena.git
+  revision: 8f32e51a65d77c613ca04d176149ca277c8cd270
   specs:
     helena (0.1.0)
       bootstrap-sass
@@ -7,7 +8,6 @@ PATH
       haml
       haml-rails
       jquery-rails
-      liquid
       mongoid (~> 4.0.0.beta1)
       mongoid-simple-tags
       mongoid_orderable
@@ -121,7 +121,6 @@ GEM
     jwt (1.0.0)
     launchy (2.4.2)
       addressable (~> 2.3)
-    liquid (2.6.1)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
