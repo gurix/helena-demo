@@ -17,4 +17,5 @@ end
 
 RSpec.configure do |config|
   config.include FeatureSpecsLoginHelper, type: :feature
+  config.include Devise::TestHelpers, type: :controller
 end

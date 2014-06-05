@@ -5,7 +5,7 @@
     %h1 {{ survey_title }}
     %p {{ survey_description }}
   .col-xs-12.col-sm-4
-    %h3.pull-right {{ user.name }}
+    .lead.pull-right {{ user.name }}
 %br
 %br
 .svg-container
@@ -16,8 +16,41 @@
       %path{class: 'positive', d: 'M0,53.1 L323.204023,53.1 L323.204023,4 L0,53.1 Z', fill: '#B8E986'}
       %path{class: 'negative', d: 'M0,53.1 L323.204023,53.1 L323.204023,4 L0,53.1 Z', fill: '#FF6276', transform: 'translate(161.565068, 28.050000) scale(-1, -1) translate(-161.565068, -28.050000)' }
       %line{ x1: '{{ line_position }}', y1: 0, x2: '{{ line_position }}', y2: 56, stroke: "#000000", 'stroke-width' => 3 }
-%br
-%br
+%h2 Details
+%p
+  %table.table
+    %tr
+      %td
+        %img{ src: "/assets/life_satisfaction_{{life_is_ideal}}.svg"}
+      %td
+        .lead
+          In most ways my life is close to my ideal.
+    %tr
+      %td
+        %img{ src: "/assets/life_satisfaction_{{condition}}.svg"}
+      %td
+        .lead
+          The conditions of my life are excellent.
+    %tr
+      %td
+        %img{ src: "/assets/life_satisfaction_{{satisfied_with_life}}.svg"}
+      %td
+        .lead
+          I am satisfied with my life.
+    %tr
+      %td
+        %img{ src: "/assets/life_satisfaction_{{important_things}}.svg"}
+      %td
+        .lead
+          So far I have gotten the important things I want in life.
+    %tr
+      %td
+        %img{ src: "/assets/life_satisfaction_{{nothing_to_change}}.svg"}
+      %td
+        .lead
+          If I could live my life over, I would change almost nothing.
+
+
 %p To understand life satisfaction scores, it is helpful to understand some of the components that go into most people’s experience of satisfaction. One of the most important influences on happiness is social relationships. People who score high on life satisfaction tend to have close and supportive family and friends, whereas those who do not have close friends and family are more likely to be dissatisfied. Of course the loss of a close friend or family member can cause dissatisfaction with life, and it may take quite a time for the person to bounce back from the loss.
 
 %p Another factor that influences the life satisfaction of most people is work or school, or performance in an important role such as homemaker or grandparent. When the person enjoys his or her work, whether it is paid or unpaid work, and feels that it is meaningful and important, this contributes to life satisfaction. When work is going poorly because of bad circumstances or a poor fit with the person’s strengths, this can lower life satisfaction. When a person has important goals, and is failing to make adequate progress toward them, this too can lead to life dissatisfaction.

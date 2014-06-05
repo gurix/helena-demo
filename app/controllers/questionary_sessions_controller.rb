@@ -1,11 +1,12 @@
-require 'haml'
 class QuestionarySessionsController < Helena::SessionsController
   before_filter :authenticate_user!
 
   def show
     @session = current_user.questionary_sessions.find(params[:id])
     version = @survey.versions.find(@session.version_id)
-    template = Liquid::Template.parse(version.session_report)
+    # content = Haml::Engine.new(File.read(Rails.root.join "db/seeds/files/report_satisfaction_scale_survey.de.html.haml")).render
+    content = version.session_report
+    template = Liquid::Template.parse(content)
     render html: template.render(variable_mapping.merge user_mapping).html_safe, layout: true
   end
 

@@ -16,8 +16,40 @@
       %path{class: 'positive', d: 'M0,53.1 L323.204023,53.1 L323.204023,4 L0,53.1 Z', fill: '#B8E986'}
       %path{class: 'negative', d: 'M0,53.1 L323.204023,53.1 L323.204023,4 L0,53.1 Z', fill: '#FF6276', transform: 'translate(161.565068, 28.050000) scale(-1, -1) translate(-161.565068, -28.050000)' }
       %line{ x1: '{{ line_position }}', y1: 0, x2: '{{ line_position }}', y2: 56, stroke: "#000000", 'stroke-width' => 3 }
-%br
-%br
+%h2 Details
+%p
+  %table.table
+    %tr
+      %td
+        %img{ src: "/assets/life_satisfaction_{{life_is_ideal}}.svg"}
+      %td
+        .lead
+          In den meisten Punkten ist mein Leben dem Ideal nahe.
+    %tr
+      %td
+        %img{ src: "/assets/life_satisfaction_{{condition}}.svg"}
+      %td
+        .lead
+          Meine Lebensbedingungen sind hervorragend.
+    %tr
+      %td
+        %img{ src: "/assets/life_satisfaction_{{satisfied_with_life}}.svg"}
+      %td
+        .lead
+          Ich bin zufrieden mit meinem Leben.
+    %tr
+      %td
+        %img{ src: "/assets/life_satisfaction_{{important_things}}.svg"}
+      %td
+        .lead
+          Ich habe bisher die wichtigsten Dinge in meinem Leben auch bekommen.
+    %tr
+      %td
+        %img{ src: "/assets/life_satisfaction_{{nothing_to_change}}.svg"}
+      %td
+        .lead
+          Wenn ich mein Leben noch einmal leben könnte, würde ich fast nichts ändern.
+
 %p Die aus fünf Fragen bestehende SWLS (Satisfaction with Life Scale) misst die globale (allgemeine) Lebenszufriedenheit einer Person, wobei ein höherer Gesamtwert als Indikator einer höheren Lebenszufriedenheit gezählt wird.
 
 Die SWLS basiert auf dem Konzept des „Subjektiven Wohlbefindens“, welches sich aus einer emotionalen/affektiven (Wie fühle ich mich?) und einer kognitiv-evaluativen Komponente (Wie bewerte ich meine Lebenssituation?) zusammensetzt. Die SWLS fokussiert dabei auf die kognitiv-evaluative Komponente.
