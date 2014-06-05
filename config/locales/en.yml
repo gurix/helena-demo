@@ -6,7 +6,7 @@ en:
       failed_to_create_session: 'Failed to create session'
 
   welcome:
-    index:
+    survey:
       sign_in: Please sign in to complete this questionary
       new_session: Complete this questionary with a new session
       session_completed: Session was sucessfully completed
