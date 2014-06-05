@@ -13,13 +13,13 @@ module Seeds
                                                           required:      true,
                                                           position:      1
 
-      satisfaction_matrix.labels << build(:label, position: 1, text: 'Strongly Disagree', value: 1)
-      satisfaction_matrix.labels << build(:label, position: 2, text: 'Disagree', value: 2)
-      satisfaction_matrix.labels << build(:label, position: 3, text: 'Slightly Disagree', value: 3)
-      satisfaction_matrix.labels << build(:label, position: 4, text: 'Neither Agree or Disagree', value: 4)
-      satisfaction_matrix.labels << build(:label, position: 5, text: 'Slightly Agree', value: 5)
-      satisfaction_matrix.labels << build(:label, position: 6, text: 'Agree', value: 6)
-      satisfaction_matrix.labels << build(:label, position: 7, text: 'Strongly Agree', value: 7)
+      satisfaction_matrix.labels << build(:label, position: 1, text: 'Strongly Disagree', value: 0)
+      satisfaction_matrix.labels << build(:label, position: 2, text: 'Disagree', value: 1)
+      satisfaction_matrix.labels << build(:label, position: 3, text: 'Slightly Disagree', value: 2)
+      satisfaction_matrix.labels << build(:label, position: 4, text: 'Neither Agree or Disagree', value: 3)
+      satisfaction_matrix.labels << build(:label, position: 5, text: 'Slightly Agree', value: 4)
+      satisfaction_matrix.labels << build(:label, position: 6, text: 'Agree', value: 5)
+      satisfaction_matrix.labels << build(:label, position: 7, text: 'Strongly Agree', value: 6)
 
       satisfaction_matrix.sub_questions << build(:sub_question, text: 'In most ways my life is close to my ideal.', code: 'life_is_ideal', position: 1)
       satisfaction_matrix.sub_questions << build(:sub_question, text: 'The conditions of my life are excellent.', code: 'condition', position: 2)
@@ -48,13 +48,13 @@ module Seeds
                                                           required:      true,
                                                           position:      1
 
-      satisfaction_matrix.labels << build(:label, position: 1, text: 'starke Ablehnung', value: 1)
-      satisfaction_matrix.labels << build(:label, position: 2, text: 'Ablehnung', value: 2)
-      satisfaction_matrix.labels << build(:label, position: 3, text: 'leichte Ablehnung', value: 3)
-      satisfaction_matrix.labels << build(:label, position: 4, text: 'weder Ablehnung noch Zustimmung', value: 4)
-      satisfaction_matrix.labels << build(:label, position: 5, text: 'leichte Zustimmung', value: 5)
-      satisfaction_matrix.labels << build(:label, position: 6, text: 'Zustimmung', value: 6)
-      satisfaction_matrix.labels << build(:label, position: 7, text: 'starke Zustimmung', value: 7)
+      satisfaction_matrix.labels << build(:label, position: 1, text: 'starke Ablehnung', value: 0)
+      satisfaction_matrix.labels << build(:label, position: 2, text: 'Ablehnung', value: 1)
+      satisfaction_matrix.labels << build(:label, position: 3, text: 'leichte Ablehnung', value: 2)
+      satisfaction_matrix.labels << build(:label, position: 4, text: 'weder Ablehnung noch Zustimmung', value: 3)
+      satisfaction_matrix.labels << build(:label, position: 5, text: 'leichte Zustimmung', value: 4)
+      satisfaction_matrix.labels << build(:label, position: 6, text: 'Zustimmung', value: 5)
+      satisfaction_matrix.labels << build(:label, position: 7, text: 'starke Zustimmung', value: 6)
 
       satisfaction_matrix.sub_questions << build(:sub_question, text: 'In den meisten Punkten ist mein Leben meinem Ideal nahe.', code: 'life_is_ideal', position: 1)
       satisfaction_matrix.sub_questions << build(:sub_question, text: 'Meine Lebensbedingungen sind hervorragend.', code: 'condition', position: 2)
