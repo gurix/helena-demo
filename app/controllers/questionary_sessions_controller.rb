@@ -22,7 +22,7 @@ class QuestionarySessionsController < Helena::SessionsController
 
   def custom_mapping
     { user: @session.user.attributes,
-      pdf_url: "http://www.html2pdf.it/?url=#{main_app.survey_questionary_session_url(@survey, @session.view_token)}"
+      pdf_url: "http://www.html2pdf.it/?url=#{main_app.survey_questionary_session_url(@survey, @session.view_token)}&format=A4&margin=1cm"
     }.deep_stringify_keys
   end
 end
