@@ -26,6 +26,6 @@
                   = survey.versions.find(session.version_id).version
                 %td
                   - if session.completed?
-                    = link_to t('.view'), main_app.survey_questionary_session_path(survey, session)
+                    = link_to t('.view'), main_app.survey_questionary_session_path(survey, session.view_token)
                   - else
-                    = link_to t('.proceed'), helena.edit_survey_session_path(survey, session)
+                    = link_to t('.proceed'), helena.edit_survey_session_path(survey, session.token)

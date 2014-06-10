@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     root 'welcome#index'
 
     resources :surveys, only: [] do
-      resources :questionary_sessions, only: [:new, :show]
+      resources :questionary_sessions, only: [:new, :show], param: :token
     end
 
     mount Helena::Engine => '/helena'

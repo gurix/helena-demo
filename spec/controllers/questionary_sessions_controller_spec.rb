@@ -15,6 +15,6 @@ feature QuestionarySessionsController do
     published_version.notes = 'bla bla'
     published_version.save
 
-    expect{ get :new, survey_id: @survey }.to change{ QuestionarySession.count }.by(1)
+    expect { get :new, survey_id: @survey }.to change { QuestionarySession.count }.by(1)
   end
 end
