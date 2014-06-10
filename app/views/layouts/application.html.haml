@@ -7,15 +7,16 @@
 
   %title HelenaDemo
 
-  = stylesheet_link_tag 'application'
+  = stylesheet_link_tag 'application',  media: 'screen, print'
   = csrf_meta_tags
+
 %body{class: controller_name}
   .container
     = render partial: 'shared/flash_messages', flash: flash
     = render 'shared/breadcrumbs'
 
     = yield
-  = link_to 'https://github.com/gurix/helena' do
+  = link_to 'https://github.com/gurix/helena', class: 'hidden-print' do
     = image_tag 'forkme.png', alt: 'Fork me on GitHub', class: 'github-ribbon'
 
   = javascript_include_tag 'application'

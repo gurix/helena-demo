@@ -2,10 +2,11 @@
 {% assign line_position = 323 | times: percent | divided_by: 100 %}
 .row
   .col-xs-12.col-sm-8
+    .visible-xs.lead.pull-right {{ user.name }}
     %h1 {{ survey_title }}
     %p {{ survey_description }}
-  .col-xs-12.col-sm-4
-    %h3.pull-right {{ user.name }}
+  .hidden-xs.col-sm-4
+    .lead.pull-right {{ user.name }}
 %br
 %br
 .svg-container
@@ -61,5 +62,5 @@ Die SWLS basiert auf dem Konzept des „Subjektiven Wohlbefindens“, welches si
   %p
   Diener, E., Emmons, R. A., Larsen, R. J., & Griffin, S. (2003). SWLS. Satisfaction with Life Scale. In J. Schumacher, A. Klaiberg & E. Brähler (Hrsg.), Diagnostische Verfahren zu Lebensqualität und Wohlbefinden (S. 305 – 309). Göttingen: Hogrefe.
 
-%a.btn.btn-default.pull-right{href: "{{pdf_url}}"}
+%a.btn.btn-default.pull-right.hidden-print{href: "{{pdf_url}}"}
   Profil als PDF herunterladen

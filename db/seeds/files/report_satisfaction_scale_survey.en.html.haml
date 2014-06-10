@@ -2,9 +2,10 @@
 {% assign line_position = 323 | times: percent | divided_by: 100 %}
 .row
   .col-xs-12.col-sm-8
+    .visible-xs.lead.pull-right {{ user.name }}
     %h1 {{ survey_title }}
     %p {{ survey_description }}
-  .col-xs-12.col-sm-4
+  .hidden-xs.col-sm-4
     .lead.pull-right {{ user.name }}
 %br
 %br
@@ -63,5 +64,5 @@ A third factor that influences the life satisfaction of most people is personal 
   %br
   Use is free of charge and granted by permission.
 
-%a.btn.btn-default.pull-right{href: "{{pdf_url}}"}
-  Dowload profile as PDF
+%a.btn.btn-default.pull-right.hidden-print{href: "{{pdf_url}}"}
+  Download profile as PDF
