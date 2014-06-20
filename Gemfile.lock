@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/gurix/helena.git
-  revision: 0b06ee755dc53e9cde8b0aa6e75fbad1d2fa9da8
+  revision: db0c2fb84cd70e4d12c346464802dd9c40916a5d
   specs:
-    helena (0.2.1)
+    helena (0.2.2)
       bootstrap-sass
       breadcrumbs_on_rails
       haml
