@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature QuestionarySessionsController do
+describe QuestionarySessionsController do
   before do
     @user = create :user
     @user.confirm!
