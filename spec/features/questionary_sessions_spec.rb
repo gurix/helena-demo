@@ -18,7 +18,7 @@ feature 'Questionary sessions' do
     session.answers << build(:string_answer, code: 'country', value: 'Canada')
     session.answers << build(:integer_answer, code: 'released', value: 2006)
 
-    visit survey_questionary_session_path(:en, @survey, session.view_token)
+    visit questionary_session_path(:en, session.view_token)
 
     expect(page).to have_content 'Canada 2006'
   end
