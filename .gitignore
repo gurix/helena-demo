@@ -11,3 +11,7 @@
 /log/*
 /tmp
 
+.Rproj.user
+.DS_Store
+.last_run.json
+.resultset.json
