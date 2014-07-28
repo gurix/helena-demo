@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.1.0"
 # see http://sourcey.com/rails-4-omniauth-using-devise-with-twitter-facebook-and-linkedin/
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
