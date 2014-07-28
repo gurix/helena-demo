@@ -4,14 +4,14 @@
   %meta{ 'http-equiv' => 'X-UA-Compatible', content: 'IE=edge' }
   %meta{ content: 'Helena survey framework demo', name: 'description' }/
   %meta{ content: 'width=device-width', name: 'viewport' }/
-
+  = javascript_include_tag 'application'
   %title HelenaDemo
 
   = stylesheet_link_tag 'application',  media: 'screen, print'
   = csrf_meta_tags
 
 %body{class: controller_name}
-  .container
+  #mainapp.container
     = render partial: 'shared/flash_messages', flash: flash
     = render 'shared/breadcrumbs'
 
@@ -19,10 +19,10 @@
   = link_to 'https://github.com/gurix/helena', class: 'hidden-print' do
     = image_tag 'forkme.png', alt: 'Fork me on GitHub', class: 'github-ribbon'
 
-  = javascript_include_tag 'application'
   %script{src: "//static.getclicky.com/js", type: "text/javascript"}
-  :javascript
-    try{ clicky.init(100741910); }catch(e){}
+  - if Rails.env.production?
+    :javascript
+      try{ clicky.init(100741910); }catch(e){}
   %noscript
     %p
       %img{alt: "Clicky", height: "1", src: "//in.getclicky.com/100741910ns.gif", width: "1"}/

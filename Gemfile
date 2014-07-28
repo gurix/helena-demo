@@ -35,6 +35,10 @@ gem 'breadcrumbs_on_rails'
 gem 'rails-boilerplate'
 gem 'simple_form'
 gem 'haml-rails'
+gem 'hamlbars'
+
+gem 'ember-rails'
+gem 'ember-source'
 
 gem 'bootstrap-sass', '~> 3.1.1'
 

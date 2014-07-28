@@ -8,7 +8,6 @@ feature 'Questionary sessions' do
   end
 
   scenario 'generating a new session' do
-
     published_version = Helena::VersionPublisher.publish @baseversion
     published_version.notes = 'bla bla'
     published_version.session_report = '{{ country }} {{ released }}'
