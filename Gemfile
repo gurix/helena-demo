@@ -40,7 +40,7 @@ gem 'hamlbars'
 gem 'ember-rails'
 gem 'ember-source'
 
-gem 'bootstrap-sass', '~> 3.1.1'
+gem 'bootstrap-sass', '~> 3.2.0'
 
 gem 'rspec-rails', group: :test
 gem 'capybara', group: :test
