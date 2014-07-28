@@ -10,6 +10,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp
+/coverage
 
 .Rproj.user
 .DS_Store
