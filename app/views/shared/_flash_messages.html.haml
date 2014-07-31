@@ -1,4 +1,5 @@
-#flashes
-  - flash.each do |type, message|
-    %div{class: "alert alert-#{type} fade in"}
-      = message
+- if flash.any?
+  #flashes
+    - flash.each do |type, message|
+      %div{class: "alert alert-#{type} fade in"}
+        = message

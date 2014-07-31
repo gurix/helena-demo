@@ -26,6 +26,69 @@
 @import 'alerts'
 @import 'welcome'
 
+nav.navbar-static-top
+  margin-bottom: 4px
+
+  .container
+    padding: 10px
+
+    .navbar-collapse
+      &.collapse.in
+        margin-top: 10px
+      &.collapsing
+        margin-top: 10px
+
+    .navbar-header
+      height: 53px
+      .navbar-brand
+        padding: 3px 15px
+
+        img
+          width: 50px
+
+    .navbar-nav
+      margin-right: 150px
+
+      li a
+        font-weight: bold
+
+#languages
+  padding-top: 10px
+
+  img
+    width: 22px
+
+
+  .language
+    display: inline-block
+    vertical-align: middle
+    padding: 0px 5px
+    border-left: 1px solid black
+
+    a
+      color: $navbar-default-link-color
+
+  .language:nth-child(2)
+    border-left: none
+    padding: 0px
+
+#flashes
+  margin-top: 10px
+
+.hide-text
+  visibility: hidden
+
+body > .container
+  padding-bottom: 10px
+
+@media (min-width: $grid-float-breakpoint)
+  .pull-nav-right
+    float: right !important
+
+@media (max-width: $grid-float-breakpoint)
+  .github-ribbon
+    display: none
+
 @media print
   .container
     width: 100%
@@ -37,6 +100,3 @@
   border: 0
   z-index: 2000
 
-@media (max-width: $grid-float-breakpoint)
-  .github-ribbon
-    display: none

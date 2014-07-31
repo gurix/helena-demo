@@ -1,7 +1,9 @@
 en:
   shared:
-    navigation:
-      home: Helena Demo
+    topnav:
+      home: Home
+      about: About
+      contact: Contact
     errors:
       failed_to_create_session: 'Failed to create session'
 
