@@ -11,6 +11,7 @@
   = csrf_meta_tags
 
 %body{class: controller_name}
+  = render 'shared/topnav'
   #mainapp.container
     = render partial: 'shared/flash_messages', flash: flash
     = render 'shared/breadcrumbs'
