@@ -14,7 +14,7 @@
   = render 'shared/topnav'
   #mainapp.container
     = render partial: 'shared/flash_messages', flash: flash
-
+    = render 'shared/breadcrumbs'
     = yield
   #footer.container.hidden-print
     #languages
