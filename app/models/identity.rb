@@ -20,16 +20,21 @@ class Identity
   # rubocop:disable all
   def self.find_from_oauth(auth)
     identity = where(auth.slice(:provider, :uid)).first_or_create do | _identity |
-      _identity.provider     = auth.provider
-      _identity.uid          = auth.uid
-      _identity.token        = auth.credentials.token
-      _identity.secret       = auth.credentials.secret if auth.credentials.secret
-      _identity.expires_at   = auth.credentials.expires_at if auth.credentials.expires_at
-      _identity.email        = auth.info.email if auth.info
-      _identity.image        = auth.info.image if auth.info
-      _identity.nickname     = auth.info.nickname if auth.info
-      _identity.first_name   = auth.info.first_name if auth.info
-      _identity.last_name    = auth.info.last_name if auth.info
+      _identity.provider = auth.provider
+      _identity.uid      = auth.uid
+
+      if auth.credentials
+        _identity.token      = auth.credentials.token
+        _identity.secret     = auth.credentials.secret
+        _identity.expires_at = auth.credentials.expires_at
+      end
+      if auth.info
+        _identity.email      = auth.info.email
+        _identity.image      = auth.info.image
+        _identity.nickname   = auth.info.nickname
+        _identity.first_name = auth.info.first_name
+        _identity.last_name  = auth.info.last_name
+      end
     end
     identity.save!
 

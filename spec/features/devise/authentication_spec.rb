@@ -50,6 +50,15 @@ feature 'Authentication' do
     expect(page).to have_content('mockuser')
   end
 
+  scenario 'A guest signs in with Facebook account' do
+    mock_auth_for_facebook
+    visit main_app.user_session_path
+
+    click_link 'Sign in with Facebook'
+
+    expect(page).to have_content('mockuser')
+  end
+
   scenario 'A user signs out' do
     sign_in_as_user
 

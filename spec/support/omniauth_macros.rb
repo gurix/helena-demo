@@ -19,5 +19,25 @@ module OmniauthMacros
       }
     )
   end
+
+  def mock_auth_for_facebook
+    OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new(
+      provider: 'facebook',
+      uid: 123_545,
+      info: {
+        name: 'mockuser',
+        image: 'mock_user_thumbnail_url'
+      },
+      credentials: {
+        token: 'mock_token',
+        secret: 'mock_secret'
+      },
+      extra: {
+        raw_info: {
+          name: 'mockuser'
+        }
+      }
+    )
+  end
   # rubocop:enable all
 end
