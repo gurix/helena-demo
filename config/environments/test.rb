@@ -42,4 +42,5 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :file
   config.action_mailer.file_settings = { location: 'log/mails' }
 
+  OmniAuth.config.test_mode = true
 end

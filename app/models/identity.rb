@@ -25,11 +25,11 @@ class Identity
       _identity.token        = auth.credentials.token
       _identity.secret       = auth.credentials.secret if auth.credentials.secret
       _identity.expires_at   = auth.credentials.expires_at if auth.credentials.expires_at
-      _identity.email        = auth.info.email if auth.info.email
-      _identity.image        = auth.info.image if auth.info.image
-      _identity.nickname     = auth.info.nickname
-      _identity.first_name   = auth.info.first_name
-      _identity.last_name    = auth.info.last_name
+      _identity.email        = auth.info.email if auth.info
+      _identity.image        = auth.info.image if auth.info
+      _identity.nickname     = auth.info.nickname if auth.info
+      _identity.first_name   = auth.info.first_name if auth.info
+      _identity.last_name    = auth.info.last_name if auth.info
     end
     identity.save!
 

@@ -27,6 +27,8 @@ RSpec.configure do |config|
 
   config.include Mongoid::Matchers, type: :model
 
+  config.include OmniauthMacros
+
   DatabaseCleaner.strategy = :truncation
 
   config.before(:suite) do

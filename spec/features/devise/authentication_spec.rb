@@ -41,6 +41,15 @@ feature 'Authentication' do
     expect(page).to have_content 'A message with a confirmation link has been sent to your email address. Please open the link to activate your account'
   end
 
+  scenario 'A guest signs in  with Twitter account' do
+    mock_auth_for_twitter
+    visit main_app.user_session_path
+
+    click_link 'Sign in with Twitter'
+
+    expect(page).to have_content('mockuser')
+  end
+
   scenario 'A user signs out' do
     sign_in_as_user
 
