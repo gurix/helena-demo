@@ -13,11 +13,6 @@ class QuestionarySessionsController < Helena::SessionsController
   def new
     survey = Helena::Survey.find params[:survey_id]
     session = QuestionarySession.new survey: survey, version: survey.newest_version, user: current_user
-    if session.save
-      redirect_to helena.edit_session_path(session.token), status: :found
-    else
-      flash[:error] = t 'shared.errors.failed_to_create_session'
-      redirect_to main_app.root_path
-    end
+    session.save and redirect_to helena.edit_session_path(session.token), status: :found
   end
 end
