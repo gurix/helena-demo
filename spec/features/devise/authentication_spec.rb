@@ -41,7 +41,7 @@ feature 'Authentication' do
     expect(page).to have_content 'A message with a confirmation link has been sent to your email address. Please open the link to activate your account'
   end
 
-  scenario 'A guest signs in  with Twitter account' do
+  scenario 'A guest signs in via Twitter' do
     mock_auth_for_twitter
     visit main_app.user_session_path
 
@@ -50,13 +50,31 @@ feature 'Authentication' do
     expect(page).to have_content('mockuser')
   end
 
-  scenario 'A guest signs in with Facebook account' do
+  scenario 'A guest signs in via Facebook' do
     mock_auth_for_facebook
     visit main_app.user_session_path
 
     click_link 'Sign in with Facebook'
 
     expect(page).to have_content('mockuser')
+  end
+
+  scenario 'A guest signs in via Twitter with invalid credentials' do
+    OmniAuth.config.mock_auth[:twitter] = :invalid_credentials
+    visit main_app.user_session_path
+
+    click_link 'Sign in with Twitter'
+
+    expect(page).to have_content('Invalid credentials')
+  end
+
+  scenario 'A guest signs in via Facebook with invalid credentials' do
+    OmniAuth.config.mock_auth[:facebook] = :invalid_credentials
+    visit main_app.user_session_path
+
+    click_link 'Sign in with Facebook'
+
+    expect(page).to have_content('Invalid credentials')
   end
 
   scenario 'A user signs out' do
