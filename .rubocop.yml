@@ -1,14 +1,14 @@
 AllCops:
-  Includes:
+  Include:
     - Rakefile
     - config.ru
-  Excludes:
+  Exclude:
     - bin/**
     - spec/dummy/db/schema.rb
     - spec/dummy/config/initializers/secret_token.rb
-    - db/migrate/**
+    - db/migrate/**/*
     - db/seeds.rb
-    - db/seeds/**
+    - db/seeds/**/*
 Documentation:
   Enabled: false
 LineLength:
