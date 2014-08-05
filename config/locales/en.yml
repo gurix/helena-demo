@@ -4,6 +4,11 @@ en:
       home: Home
       about: About
       contact: Contact
+      sign_out: Logout
+    register:
+      sign_up_with_twitter: Sign up with twitter
+      sign_up_with_facebook: Sign up with facebook
+      sign_up: Sign up
 
   welcome:
     survey:
@@ -13,3 +18,13 @@ en:
       session_not_completed: Session was not completed yet
       proceed: Proceed
       view: View report
+
+    index:
+      try_for_free: Register now and test the sample application implementing base functionality of Helena.
+      title: Register
+
+  devise:
+    registrations:
+      new:
+        title: Registration
+        subtitle: Register now and test the sample application implementing base functionality of Helena.

@@ -1,0 +1,15 @@
+.row
+  - if user_signed_in?
+    .col-xs-12.col-md-12
+      = render 'description'
+  - else
+    .col-xs-12.col-md-9
+      = render 'description'
+    .col-xs-12.col-md-3.register
+      .well
+        %strong
+          = t '.title'
+        %p
+          = t '.try_for_free'
+        = render 'shared/register'
+

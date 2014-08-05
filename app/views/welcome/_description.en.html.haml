@@ -1,0 +1,14 @@
+.page-header
+  %h1 Helena Demo App
+%p Helena is an online survey/test framework designed for agile survey/test development, longitudinal studies and instant feedback.
+
+- if user_signed_in?
+  %p== Below you see an overview of all published surveys. In this demo you can manage them in the #{link_to 'admin section', helena.admin_surveys_path}.
+
+  %p== You are logged in as #{current_user.name}.
+- else
+  %p
+    Below you see an overview of all published surveys. Once you logged in, you can also setup your own surveys and play around.
+
+- @surveys.each do |survey|
+  = render 'survey', survey: survey

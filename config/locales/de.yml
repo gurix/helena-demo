@@ -5,10 +5,12 @@ de:
       home: Home
       about: Über uns
       contact: Kontakt
-    navigation:
-      home: Helena Demo
-      admin: Administration
+      sign_out: Abmelden
 
+    register:
+      sign_up_with_twitter: Registrieren Sie sich via twitter
+      sign_up_with_facebook: Registrieren Sie sich via facebook
+      sign_up: Registrieren
   welcome:
     survey:
       sign_in: Bitte melden Sie sich an um an der Umfrage teilzunehmen
@@ -17,6 +19,9 @@ de:
       session_not_completed: Die Sitzung ist noch pendent
       proceed: Fortfahren
       view: Bericht betrachten
+    index:
+      try_for_free: Registrieren Sie sich jetzt und testen sie die Beispielanwendung von Helena.
+      title: Registrieren
 
   helena:
     sessions:

@@ -32,7 +32,7 @@ feature 'Authentication' do
     visit main_app.new_user_registration_path
 
     fill_in 'Email', with: 'hans.muster@somedomain.tld'
-    fill_in 'N', with: 'Inspector Columbo'
+    fill_in 'Name', with: 'Inspector Columbo'
     fill_in 'Password', with: 'Peugeot403'
     fill_in 'Password confirmation', with: 'Peugeot403'
 
@@ -82,7 +82,7 @@ feature 'Authentication' do
 
     visit main_app.root_path
 
-    click_link 'Sign out here'
+    click_link 'Logout'
 
     expect(page).to have_content 'Signed out successfully.'
   end
