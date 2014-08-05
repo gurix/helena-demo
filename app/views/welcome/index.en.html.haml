@@ -1,7 +1,5 @@
 .row
-  .col-xs-12.col-md-2
-    = image_tag 'logo.png', alt: 'Helena Demo', class: 'logo'
-  .col-xs-12.col-md-9
+  .col-xs-12
     %h1 Helena Demo App
     %p Helena is an online survey/test framework designed for agile survey/test development, longitudinal studies and instant feedback.
 
@@ -17,8 +15,3 @@
 
 - @surveys.each do |survey|
   = render 'survey', survey: survey
-
-#languages
-  = link_to main_app.root_path(locale: :de) do
-    View this site also in German
-    %img{ src: image_path('icon_de.png'), alt: 'German' }

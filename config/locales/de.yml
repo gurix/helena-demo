@@ -1,11 +1,14 @@
 de:
   shared:
     required: '* bezeichnet Pflichtfelder'
+    topnav:
+      home: Home
+      about: Über uns
+      contact: Kontakt
     navigation:
       home: Helena Demo
       admin: Administration
-    errors:
-      failed_to_create_session: 'Es konnte keine Sitzung erstellt werden.'
+
   welcome:
     survey:
       sign_in: Bitte melden Sie sich an um an der Umfrage teilzunehmen

@@ -11,11 +11,16 @@
   = csrf_meta_tags
 
 %body{class: controller_name}
+  = render 'shared/topnav'
   #mainapp.container
     = render partial: 'shared/flash_messages', flash: flash
     = render 'shared/breadcrumbs'
-
     = yield
+  #footer.container.hidden-print
+    #languages
+      %img{ src: image_path('earth.svg') }
+      = render 'shared/languages'
+
   = link_to 'https://github.com/gurix/helena', class: 'hidden-print' do
     = image_tag 'forkme.png', alt: 'Fork me on GitHub', class: 'github-ribbon'
 

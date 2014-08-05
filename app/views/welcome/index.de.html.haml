@@ -1,7 +1,5 @@
 .row
-  .col-xs-12.col-md-2
-    = image_tag 'logo.png', alt: 'Helena Demo', class: 'logo'
-  .col-xs-12.col-md-9
+  .col-xs-12
     %h1 Helena Demo App
     %p Helena ist ein online Umfrage- / Testframework konzipiert für agile Entwicklung von Umfragen/Tests, Langzeitstudien und Profildarstellung.
     - if user_signed_in?
@@ -16,8 +14,3 @@
 
 - @surveys.each do |survey|
   = render 'survey', survey: survey
-
-#languages
-  = link_to main_app.root_path(locale: :en) do
-    View this site also in English
-    %img{ src: image_path('icon_en.png'), alt: 'English' }

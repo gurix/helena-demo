@@ -50,7 +50,7 @@ class User
   ## Token authenticatable
   # field :authentication_token, type: String
 
-  def self.find_for_oauth(auth, signed_in_resource = nil)
+  def self.find_for_oauth(auth, _signed_in_resource = nil)
     # Get the identity and user if they exist
     identity = Identity.find_from_oauth(auth)
     user = identity.user
@@ -64,8 +64,6 @@ class User
     end
     user
   end
-
-  private
 
   def self.create_user_from_auth(auth)
     user = User.new(
