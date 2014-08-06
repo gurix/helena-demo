@@ -24,10 +24,10 @@
   = link_to 'https://github.com/gurix/helena', class: 'hidden-print' do
     = image_tag 'forkme.png', alt: 'Fork me on GitHub', class: 'github-ribbon'
 
-  %script{src: "//static.getclicky.com/js", type: "text/javascript"}
+  %script{src: '//static.getclicky.com/js', type: 'text/javascript'}
   - if Rails.env.production?
     :javascript
       try{ clicky.init(100741910); }catch(e){}
   %noscript
     %p
-      %img{alt: "Clicky", height: "1", src: "//in.getclicky.com/100741910ns.gif", width: "1"}/
+      %img{alt: 'Clicky', height: 1, src: '//in.getclicky.com/100741910ns.gif', width: 1}/

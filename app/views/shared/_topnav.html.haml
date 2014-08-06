@@ -1,7 +1,7 @@
 %nav.navbar.navbar-default.navbar-static-top
   .container
     .navbar-header
-      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
+      %button.navbar-toggle{'data-target' => '.navbar-collapse', 'data-toggle' => 'collapse', type: 'button'}
         %span.sr-only Toggle navigation
         %span.icon-bar
         %span.icon-bar
@@ -16,3 +16,6 @@
           = link_to t('.about'), 'https://github.com/gurix/helena'
         %li
           = link_to t('.contact'), 'https://github.com/gurix'
+        - if user_signed_in?
+          %li
+            = link_to t('.sign_out'), main_app.destroy_user_session_path, method: :delete

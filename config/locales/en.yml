@@ -4,6 +4,18 @@ en:
       home: Home
       about: About
       contact: Contact
+      sign_out: Sign out
+
+    register_form:
+      sign_up_with_twitter: Sign up with Twitter
+      sign_up_with_facebook: Sign up with Facebook
+      sign_up: Register
+
+    login_form:
+      sign_in_with_twitter: Sign in with Twitter
+      sign_in_with_facebook: Sign in with Facebook
+      sign_in: Sign in
+      forgot_password: Forgot your password?
 
   welcome:
     survey:
@@ -13,3 +25,24 @@ en:
       session_not_completed: Session was not completed yet
       proceed: Proceed
       view: View report
+
+    index:
+      try_for_free: Register now and test the sample application implementing base functionality of Helena.
+
+  devise:
+    registrations:
+      new:
+        title: Registration
+        subtitle: Register now and test the sample application implementing base functionality of Helena.
+
+    sessions:
+      new:
+        title: Sign in
+
+    passwords:
+      new:
+        title: Forgot your password?
+        send: Reset my password
+      edit:
+        title: Change your password
+        change_password: Change my password

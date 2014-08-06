@@ -1,0 +1,13 @@
+.page-header
+  %h1 Helena Demo App
+%p Helena ist ein online Umfrage- / Testframework konzipiert für agile Entwicklung von Umfragen/Tests, Langzeitstudien und Profildarstellung.
+
+- if user_signed_in?
+  %p== Unten sehen Sie eine Liste aller publizierten Umfragen. In diesem Demo können Sie diese im #{link_to 'Administrationsbereich (Englisch)', helena.admin_surveys_path(locale: :en)} verwalten.
+
+  %p== Sie sind zurzeit als #{current_user.name} angemeldet.
+- else
+  %p Unten sehen Sie eine Liste aller publizierten Umfragen. Nach dem Sie sich angemeldet haben, können Sie ihre eigenen Umfragen erstellen und alles ausprobieren.
+
+- @surveys.each do |survey|
+  = render 'survey', survey: survey

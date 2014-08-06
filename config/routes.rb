@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
     get 'welcome/index'
 
-    devise_for :users, skip: :omniauth_callbacks
+    devise_for :users, skip: :omniauth_callbacks, controllers: { passwords: 'passwords', registrations: 'registrations' }
 
     # You can have the root of your site routed with "root"
     root 'welcome#index'

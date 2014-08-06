@@ -4,7 +4,6 @@ module FeatureSpecsLoginHelper
   Warden.test_mode!
 
   def sign_in_as(user)
-    user.confirm!
     login_as user
     user
   end

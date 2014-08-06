@@ -25,4 +25,8 @@ class ApplicationController < ActionController::Base
   def redirect_to_locale
     redirect_to root_path(locale: I18n.locale) if request.path == '/'
   end
+
+  def after_sign_in_path_for(_resource_or_scope)
+    root_path locale: I18n.locale
+  end
 end

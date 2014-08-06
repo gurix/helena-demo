@@ -1,0 +1,6 @@
+de:
+  mongoid:
+    attributes:
+      user:
+        password: Passwort
+        password_confirmation: Passwort bestätigen

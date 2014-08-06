@@ -26,6 +26,8 @@ module HelenaDemo
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :en
 
+    config.i18n.load_path += Dir["#{Rails.root}/config/locales/**/*.{rb,yml}"]
+
     config.i18n.enforce_available_locales = false
     config.serve_static_assets = true
 
