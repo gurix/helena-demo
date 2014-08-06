@@ -7,13 +7,13 @@ en:
       sign_out: Sign out
 
     register_form:
-      sign_up_with_twitter: Sign up with twitter
-      sign_up_with_facebook: Sign up with facebook
+      sign_up_with_twitter: Sign up with Twitter
+      sign_up_with_facebook: Sign up with Facebook
       sign_up: Register
 
     login_form:
-      sign_in_with_twitter: Sign in with twitter
-      sign_in_with_facebook: Sign in with facebook
+      sign_in_with_twitter: Sign in with Twitter
+      sign_in_with_facebook: Sign in with Facebook
       sign_in: Sign in
       forgot_password: Forgot your password?
 
@@ -35,10 +35,14 @@ en:
         title: Registration
         subtitle: Register now and test the sample application implementing base functionality of Helena.
 
+    sessions:
+      new:
+        title: Sign in
+
     passwords:
       new:
         title: Forgot your password?
-        send: Send me a new password
+        send: Reset my password
       edit:
         title: Change your password
         change_password: Change my password

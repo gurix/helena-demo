@@ -12,6 +12,12 @@ de:
       sign_up_with_facebook: Registrieren Sie sich via facebook
       sign_up: Registrieren
 
+    login_form:
+      sign_in_with_twitter: Melden Sie sich via Twitter an
+      sign_in_with_facebook: Melden Sie sich via Facebook an
+      sign_in: Anmelden
+      forgot_password: Passwort vergessen?
+
   welcome:
     survey:
       sign_in: Bitte melden Sie sich an um an der Umfrage teilzunehmen
@@ -23,6 +29,20 @@ de:
     index:
       try_for_free: Registrieren Sie sich jetzt und testen sie die Beispielanwendung von Helena.
       title: Registrieren
+
+  devise:
+    sessions:
+      new:
+        title: Anmelden
+
+    passwords:
+      new:
+        title: Passwort vergessen?
+        send: Passwort zurücksetzen
+      edit:
+        title: Passwort zurücksetzen
+        change_password: Passwort ändern
+
 
   helena:
     sessions:
