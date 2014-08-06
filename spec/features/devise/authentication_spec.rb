@@ -1,20 +1,7 @@
 require 'spec_helper'
 
 feature 'Authentication' do
-  scenario 'Unconfirmed user tries to sign in' do
-    create :user, email: 'hans.muster@somedomain.tld', password: 'Columbo'
-
-    visit main_app.user_session_path
-
-    fill_in 'Email', with: 'hans.muster@somedomain.tld'
-    fill_in 'Password', with: 'Columbo'
-
-    click_button 'Sign in'
-
-    expect(page).to have_content 'You have to confirm your account before continuing'
-  end
-
-  scenario 'Confirmed user signs in' do
+  scenario 'A guest signs in' do
     create :user, email: 'hans.muster@somedomain.tld', password: 'Columbo'
 
     visit main_app.user_session_path
