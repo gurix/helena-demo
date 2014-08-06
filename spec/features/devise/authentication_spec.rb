@@ -15,8 +15,7 @@ feature 'Authentication' do
   end
 
   scenario 'Confirmed user signs in' do
-    user = create :user, email: 'hans.muster@somedomain.tld', password: 'Columbo'
-    user.confirm!
+    create :user, email: 'hans.muster@somedomain.tld', password: 'Columbo'
 
     visit main_app.user_session_path
 
@@ -36,9 +35,9 @@ feature 'Authentication' do
     fill_in 'Password', with: 'Peugeot403'
     fill_in 'Password confirmation', with: 'Peugeot403'
 
-    click_button 'Sign up'
+    click_button 'Register'
 
-    expect(page).to have_content 'A message with a confirmation link has been sent to your email address. Please open the link to activate your account'
+    expect(page).to have_content 'You have signed up successfully'
   end
 
   scenario 'A guest signs in via Twitter' do
@@ -82,7 +81,7 @@ feature 'Authentication' do
 
     visit main_app.root_path
 
-    click_link 'Logout'
+    click_link 'Sign out'
 
     expect(page).to have_content 'Signed out successfully.'
   end

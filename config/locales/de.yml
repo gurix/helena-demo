@@ -7,10 +7,11 @@ de:
       contact: Kontakt
       sign_out: Abmelden
 
-    register:
+    register_form:
       sign_up_with_twitter: Registrieren Sie sich via twitter
       sign_up_with_facebook: Registrieren Sie sich via facebook
       sign_up: Registrieren
+
   welcome:
     survey:
       sign_in: Bitte melden Sie sich an um an der Umfrage teilzunehmen
