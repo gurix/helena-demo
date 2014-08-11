@@ -54,6 +54,6 @@ gem 'better_errors', group: [:development, :test]
 gem 'launchy' , group: [:development, :test]
 gem 'binding_of_caller', group: [:development, :test]
 
-gem 'mongoid-rspec', group: [:development, :test]
+gem 'mongoid-rspec', group: [:development, :test], github: 'gurix/mongoid-rspec' # TODO: replace when https://github.com/mongoid-rspec/mongoid-rspec/pull/128 is merged
 gem 'coveralls', require: false, group: :test
 

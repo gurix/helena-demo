@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/gurix/mongoid-rspec.git
+  revision: d73b0e544f500a18444190193f942687a54e8e87
+  specs:
+    mongoid-rspec (2.0.0)
+      mongoid (~> 4.0.0)
+      rake
+      rspec (>= 2.14)
+
+GIT
   remote: https://github.com/gurix/helena.git
   revision: efb3555a02de21b252cf4b871b719e583d9fcde2
   specs:
@@ -156,10 +165,6 @@ GEM
       moped (~> 2.0.0)
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
-    mongoid-rspec (1.10.0)
-      mongoid (>= 3.0.1)
-      rake
-      rspec (>= 2.14)
     mongoid-simple-tags (0.1.3)
       json (~> 1.8)
       mongoid (>= 3.0.3)
@@ -331,7 +336,7 @@ DEPENDENCIES
   jwt
   launchy
   mongoid (~> 4.0.0.rc2)
-  mongoid-rspec
+  mongoid-rspec!
   omniauth
   omniauth-facebook
   omniauth-twitter
