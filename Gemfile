@@ -14,12 +14,14 @@ gem 'coffee-rails'
 # gem 'therubyracer',  platforms: :ruby
 
 gem 'helena',
-  git: 'https://github.com/gurix/helena.git'
+  git: 'https://github.com/gurix/helena.git', branch: 'features/helena_1_0'
+
+gem 'helena_administration',
+  git: 'https://github.com/gurix/helena_administration.git'
 
 gem 'mongoid', '~> 4.0.0.rc2'
 gem 'factory_girl'
 gem 'ffaker'
-gem 'colorize'
 gem 'database_cleaner'
 gem 'rake'
 gem 'rails_12factor', group: :production
@@ -33,10 +35,6 @@ gem 'breadcrumbs_on_rails'
 
 gem 'rails-boilerplate'
 gem 'simple_form', '~> 3.1.0.rc2'
-gem 'hamlbars'
-
-gem 'ember-rails'
-gem 'ember-source'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 
@@ -56,4 +54,3 @@ gem 'binding_of_caller', group: [:development, :test]
 
 gem 'mongoid-rspec', group: [:development, :test], github: 'gurix/mongoid-rspec' # TODO: replace when https://github.com/mongoid-rspec/mongoid-rspec/pull/128 is merged
 gem 'coveralls', require: false, group: :test
-

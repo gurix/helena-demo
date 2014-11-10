@@ -12,8 +12,7 @@ Rails.application.routes.draw do
     # You can have the root of your site routed with "root"
     root 'welcome#index'
 
-    resources :questionary_sessions, only: [:new, :show], param: :token
-
     mount Helena::Engine => '/helena'
+    mount HelenaAdministration::Engine, at: '/admin'
   end
 end

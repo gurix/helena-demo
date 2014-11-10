@@ -1,0 +1,12 @@
+:javascript
+  window.location.href = "#{helena.session_path(@session.view_token, notice: t('.message'))}"
+
+%h1.survey_title
+  = @version.survey_detail.title
+
+.well
+  = t('.message')
+  %p
+  = link_to helena.session_path(@session.view_token), class: 'btn btn-success' do
+    = t('.show_profile')
+    %i.fa.fa-angle-double-right

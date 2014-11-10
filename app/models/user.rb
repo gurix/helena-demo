@@ -6,7 +6,7 @@ class User
 
   has_many :identities
 
-  has_many :questionary_sessions
+  has_many :sessions, class_name: 'Helena::Session'
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
