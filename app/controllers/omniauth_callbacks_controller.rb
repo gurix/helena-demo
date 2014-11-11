@@ -10,6 +10,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private
 
   def handle_redirect(_session_variable, kind)
+    # here we force the locale to the session locale so it siwtches to the correct locale
+    I18n.locale = session[:omniauth_login_locale] || I18n.default_locale
     sign_in_and_redirect user, event: :authentication
     set_flash_message(:notice, :success, kind: kind) if is_navigational_format?
   end

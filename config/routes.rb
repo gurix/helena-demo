@@ -9,8 +9,10 @@ Rails.application.routes.draw do
 
     devise_for :users, skip: :omniauth_callbacks, controllers: { passwords: 'passwords', registrations: 'registrations' }
 
-    # You can have the root of your site routed with "root"
     root 'welcome#index'
+
+    # We define here a route inside the locale thats just saves the current locale in the session and redirects to the normal omniauth callbacks
+    get 'omniauth/:provider' => 'omniauth#localized', as: :localized_omniauth
 
     mount Helena::Engine => '/helena'
     mount HelenaAdministration::Engine, at: '/admin'
