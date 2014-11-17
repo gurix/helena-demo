@@ -53,15 +53,14 @@ class User
   def self.find_for_oauth(auth, _signed_in_resource = nil)
     # Get the identity and user if they exist
     identity = Identity.find_from_oauth(auth)
-    user = identity.user
-    if user.nil?
-      # Get the existing user from email if the OAuth provider gives us an email
-      user = User.where(email: auth.info.email).first if auth.info.email
-      # Create the user if it is a new registration
-      user = create_user_from_auth(auth) if user.nil?
-      # Associate the identity with the user if not already
-      identity.update_attribute(:user, user) if identity.user != user
-    end
+    return identity.user if identity.user
+
+    # Get the existing user from email if the OAuth provider gives us an email
+    user = User.where(email: auth.info.email).first if auth.info.email
+    # Create the user if it is a new registration
+    user = create_user_from_auth(auth) if user.nil?
+    # Associate the identity with the user if not already
+    identity.update_attribute(:user, user) if identity.user != user
     user
   end
 

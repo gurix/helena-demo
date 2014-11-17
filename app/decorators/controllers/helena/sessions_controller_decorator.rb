@@ -4,11 +4,12 @@ Helena::SessionsController.class_eval do
   respond_to :html, :json
 
   def show
-    flash.now[:notice] = params[:notice] if params[:notice]
+    flash.now[:notice] = params[:notice]
     @session = Helena::Session.find_by view_token: params[:token]
-    @version = @session.survey.versions.find(@session.version_id)
     # @content = Slim::Template.new(Rails.root.join("db/seeds/files/report_satisfaction_scale_survey.de.html.slim").to_s).render.html_safe
     @content = session_report
+
+    @version = @session.survey.versions.find(@session.version_id)
 
     respond_with @session
   end
