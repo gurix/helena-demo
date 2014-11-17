@@ -13,8 +13,8 @@ gem 'coffee-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-gem 'helena',
-  git: 'https://github.com/gurix/helena.git', branch: 'features/helena_1_0'
+gem 'helena', '~> 1.0.0.rc1' 
+  # git: 'https://github.com/gurix/helena.git'
 
 gem 'helena_administration'
 
