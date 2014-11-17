@@ -17,31 +17,6 @@ GIT
       simple_form (~> 3.1.0.rc2)
       slim (~> 2.1.0)
 
-GIT
-  remote: https://github.com/gurix/helena_administration.git
-  revision: d6be1e65e8252296a357ebb1bb8948ff51678138
-  specs:
-    helena_administration (0.0.1)
-      bootstrap-sass (~> 3.2)
-      breadcrumbs_on_rails (~> 2.3)
-      breadcrumbs_on_rails (~> 2.3)
-      codemirror-rails
-      coffee-rails
-      font-awesome-rails
-      haml-rails (~> 0.5)
-      html5-rails
-      jquery-rails
-      jquery-rails (~> 3.1)
-      kaminari
-      mongoid (~> 4.0.0.rc2)
-      mongoid-simple-tags (~> 0.1)
-      mongoid_orderable (~> 4.1)
-      rails (~> 4.1.7)
-      rails-i18n (~> 4.0)
-      sass-rails (~> 4.0.3)
-      simple_form (~> 3.1.0.rc2)
-      slim-rails
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -142,6 +117,24 @@ GEM
       haml (>= 3.1, < 5.0)
       railties (>= 4.0.1)
     hashie (3.3.1)
+    helena_administration (0.0.2)
+      bootstrap-sass (~> 3.2)
+      breadcrumbs_on_rails (~> 2.3)
+      codemirror-rails (~> 4.5)
+      coffee-rails (~> 4.1)
+      font-awesome-rails (~> 4.2)
+      haml-rails (~> 0.5)
+      html5-rails (~> 0.1)
+      jquery-rails (~> 3.1)
+      kaminari (~> 0.16)
+      mongoid (~> 4.0)
+      mongoid-simple-tags (~> 0.1)
+      mongoid_orderable (~> 4.1)
+      rails (~> 4.1)
+      rails-i18n (~> 4.0)
+      sass-rails (~> 4.0)
+      simple_form (~> 3.1.0.rc2)
+      slim-rails (~> 2.1)
     hike (1.2.3)
     html5-rails (0.1.0)
       jquery-rails (>= 2.0)
@@ -343,7 +336,7 @@ DEPENDENCIES
   factory_girl
   ffaker
   helena!
-  helena_administration!
+  helena_administration
   jquery-rails
   jwt
   launchy

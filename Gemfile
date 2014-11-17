@@ -16,8 +16,7 @@ gem 'coffee-rails'
 gem 'helena',
   git: 'https://github.com/gurix/helena.git', branch: 'features/helena_1_0'
 
-gem 'helena_administration',
-  git: 'https://github.com/gurix/helena_administration.git'
+gem 'helena_administration'
 
 gem 'mongoid', '~> 4.0.0.rc2'
 gem 'factory_girl'
