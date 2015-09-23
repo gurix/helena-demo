@@ -50,3 +50,7 @@ gem 'binding_of_caller', group: [:development, :test]
 
 gem 'mongoid-rspec', '~> 3.0', group: [:development, :test]
 gem 'coveralls', require: false, group: :test
+
+# Using puma as recomended webserver
+# https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server
+gem 'puma'
