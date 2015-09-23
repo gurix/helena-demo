@@ -13,7 +13,6 @@ Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 Mongo::Logger.logger.level = Logger::WARN # Set log level to DEBUG to see everything
 
 RSpec.configure do |config|
-
   config.include FactoryGirl::Syntax::Methods
 
   # If true, the base class of anonymous controllers will be inferred

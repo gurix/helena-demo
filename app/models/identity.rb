@@ -16,7 +16,7 @@ class Identity
   field :first_name, type: String
   field :last_name, type: String
 
-  index({ uid: 1, provider: 1 }, { unique: true })
+  index({ uid: 1, provider: 1 }, unique: true)
   # rubocop:disable all
   def self.find_from_oauth(auth)
     identity = where(auth.slice(:provider, :uid)).first_or_create do | _identity |
