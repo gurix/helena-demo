@@ -1,11 +1,9 @@
 source 'https://rubygems.org'
-ruby "2.1.2"
-# see http://sourcey.com/rails-4-omniauth-using-devise-with-twitter-facebook-and-linkedin/
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.1.1'
+gem 'rails', '~> 4.2'
 # Use SCSS for stylesheets
-gem 'sass-rails'
+gem 'sass-rails', '~> 5'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 # Use CoffeeScript for .js.coffee assets and views
@@ -13,15 +11,14 @@ gem 'coffee-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-gem 'helena', '~> 1.0.0.rc1' 
-  # git: 'https://github.com/gurix/helena.git'
+gem 'helena', '~> 1.0.0'
+# gem 'helena', github: 'gurix/helena'
 
 gem 'helena_administration'
 
-gem 'mongoid', '~> 4.0.0.rc2'
+gem 'mongoid', '~> 5.0'
 gem 'factory_girl'
-gem 'ffaker'
-gem 'database_cleaner'
+gem 'faker'
 gem 'rake'
 gem 'rails_12factor', group: :production
 
@@ -51,5 +48,5 @@ gem 'better_errors', group: [:development, :test]
 gem 'launchy' , group: [:development, :test]
 gem 'binding_of_caller', group: [:development, :test]
 
-gem 'mongoid-rspec', group: [:development, :test]
+gem 'mongoid-rspec', '~> 3.0', group: [:development, :test]
 gem 'coveralls', require: false, group: :test

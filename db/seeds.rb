@@ -7,7 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'factory_girl'
 require 'ffaker'
-require 'database_cleaner'
 
 include FactoryGirl::Syntax::Methods
 
@@ -15,8 +14,7 @@ FactoryGirl.definition_file_paths += ['spec/factories']
 FactoryGirl.find_definitions
 
 puts 'Cleaning database ...'
-DatabaseCleaner.strategy = :truncation
-DatabaseCleaner.clean
+Mongoid.purge!
 
 Dir[File.dirname(__FILE__) + '/seeds/**/*.rb'].each {|file| require file }
 

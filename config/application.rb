@@ -29,7 +29,7 @@ module HelenaDemo
     config.i18n.load_path += Dir["#{Rails.root}/config/locales/**/*.{rb,yml}"]
 
     config.i18n.enforce_available_locales = false
-    config.serve_static_assets = true
+    config.serve_static_files = true
 
     config.generators do |g|
       g.template_engine :haml # We are using Haml by default

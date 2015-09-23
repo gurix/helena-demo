@@ -10,6 +10,8 @@ Coveralls.wear!
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
+Mongo::Logger.logger.level = Logger::WARN # Set log level to DEBUG to see everything
+
 RSpec.configure do |config|
 
   config.include FactoryGirl::Syntax::Methods
@@ -29,18 +31,12 @@ RSpec.configure do |config|
 
   config.include OmniauthMacros
 
-  DatabaseCleaner.strategy = :truncation
-
   config.before(:suite) do
     FactoryGirl.reload
   end
 
-  config.before(:each) do
-    DatabaseCleaner.start
-  end
-
   config.after(:each) do
-    DatabaseCleaner.clean
+    Mongoid.purge!
   end
 
   config.infer_spec_type_from_file_location!
