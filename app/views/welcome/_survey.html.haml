@@ -1,4 +1,4 @@
-- if survey.newest_version.active?
+- if survey.newest_version && survey.newest_version.active?
   .panel.panel-default.survey
     .panel-heading= survey.newest_version.survey_detail.title
     .panel-body
